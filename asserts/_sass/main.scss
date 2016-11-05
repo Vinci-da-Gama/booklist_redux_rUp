@@ -2,6 +2,7 @@
 /* CSS Document */
 @import "./mixins.scss";
 @import "./variables.scss";
+@import "./cssSpinner.scss";
 
 
 body.basictorso
@@ -11,6 +12,10 @@ body.basictorso
 	.commentBox {
 		color: blue;
 	}
+}
+
+.margin-top0 {
+	margin-top: 0;
 }
 
 footer.navbar-fixed-bottom {

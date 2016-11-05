@@ -2,23 +2,19 @@ import 'babel-polyfill';
 import 'whatwg-fetch';
 
 import React from 'react';
-const {Component} = React;
 import ReactDOM from 'react-dom';
-import FastClick from 'fastclick';
 
-import SuccessButton from './components/react-bs-someBtns';
-// import reducers from './reducers';
-const divContainer = document.querySelector('div.container');
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
-const CommentBox = React.createClass({
-    render: function() {
-        return ( 
-        	<div className = "commentBox" >
-            	Hello, world. -- I am a CommentBox.
-	            <SuccessButton />
-            </div>
-        );
-    }
-});
+import BooklistApp from './components/bl_app.js';
+import gReducers from './reduxers';
 
-ReactDOM.render( < CommentBox / >, divContainer );
+let booklistStore = createStore(gReducers, window.STATE_FROM_SERVER);
+const Utensil = document.querySelector('.container');
+
+ReactDOM.render(
+	<Provider store={booklistStore}>
+		<BooklistApp />
+	</Provider>, Utensil
+);
