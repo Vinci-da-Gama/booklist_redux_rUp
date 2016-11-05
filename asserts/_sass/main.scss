@@ -18,6 +18,15 @@ body.basictorso
 	margin-top: 0;
 }
 
+.before-unicode-style {
+	&:before {
+		content: '\003E\0020';
+	}
+	&:after {
+		content: '\262F';
+	}
+}
+
 footer.navbar-fixed-bottom {
 	background-color: $bgColor;
 	div.col-md-6 {

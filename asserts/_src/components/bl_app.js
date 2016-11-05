@@ -2,6 +2,7 @@ import React from 'react';
 const { Component } = React;
 import Booklist from '../containers/book-list';
 import SelectedBook from '../containers/book-detail';
+import DropdownList from '../containers/clickDropdown';
 
 class BooklistApp extends Component {
     constructor(props) {
@@ -13,6 +14,7 @@ class BooklistApp extends Component {
             <div className="row">
             	<Booklist />
                 <SelectedBook />
+                <DropdownList />
             </div>
         );
     }
